@@ -14,6 +14,11 @@ public class Main {
 		defendeQuantity = in.nextInt();
 
 		while (attackQuantity != 0 && defendeQuantity != 0) {
+			if (attackQuantity < 1 || defendeQuantity < 2) {
+				System.out.println(
+						"Para conseguir descobrir de está ou não impedido, pelo menos um atacando e dois defensores");
+				continue;
+			}
 			for (int i = 0; i < attackQuantity; i++) {
 				Player attack = new Player('A', in.nextInt());
 				scenery.addPlayer(attack);
